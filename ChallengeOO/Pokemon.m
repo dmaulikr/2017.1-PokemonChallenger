@@ -8,6 +8,7 @@
 
 #import "Pokemon.h"
 #import "TypePokemon.h"
+
 @implementation Pokemon
 
 -(PokemonType) type {
@@ -28,6 +29,7 @@
 -(void) type : (PokemonType) currentType {
     type = currentType;
 }
+
 -(void) level : (NSNumber*) currentLevel {
     level = currentLevel;
 }
@@ -35,6 +37,7 @@
 -(void) exp : (NSNumber*)currentExp {
     exp = currentExp;
 }
+
 -(void) name : (NSString*)currentName {
     name = currentName;
 }

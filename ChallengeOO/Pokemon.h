@@ -9,19 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "TypePokemon.h"
 
-@interface Pokemon : NSObject
-{
+@interface Pokemon : NSObject {
     PokemonType type;
     NSNumber * level;
     NSNumber * exp;
     NSString * name;
 }
 
+#pragma mark - Getters
 
 -(PokemonType) type;
 -(NSNumber *) level;
 -(NSNumber *) exp ;
 -(NSString *) name;
+
+#pragma mark - Setters
+
 -(void) type : (PokemonType) currentType;
 -(void) level : (NSNumber*) currentLevel;
 -(void) exp : (NSNumber*)currentExp;

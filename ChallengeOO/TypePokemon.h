@@ -12,7 +12,8 @@
    typedef enum {
        WATER = 1,
        FIRE,
-       WIND
+       WIND,
+       EARTH
    }PokemonType;
 
 @end

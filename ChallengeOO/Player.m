@@ -12,18 +12,23 @@
 -(NSMutableArray *) pokemons {
     return pokemons;
 }
+
 -(NSString *) name {
     return name;
 }
+
 -(NSString *) city {
     return city;
 }
+
 -(void) setPokemons : (NSMutableArray *) currentPokemons {
     pokemons = currentPokemons;
 }
+
 -(void) setName : (NSString *) currentName {
     name = currentName;
 }
+
 -(void) setCity : (NSString *) currentCity {
     city = currentCity;
 }
