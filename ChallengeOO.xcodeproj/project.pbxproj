@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		976DF0501E7B34F600240528 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF04F1E7B34F600240528 /* main.m */; };
+		976DF0581E7B358200240528 /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF0571E7B358200240528 /* Pokemon.m */; };
+		976DF05B1E7B359200240528 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF05A1E7B359200240528 /* Player.m */; };
+		976DF0611E7B3BDC00240528 /* TypePokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF0601E7B3BDC00240528 /* TypePokemon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		976DF04C1E7B34F600240528 /* ChallengeOO */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChallengeOO; sourceTree = BUILT_PRODUCTS_DIR; };
 		976DF04F1E7B34F600240528 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		976DF0561E7B358200240528 /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
+		976DF0571E7B358200240528 /* Pokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pokemon.m; sourceTree = "<group>"; };
+		976DF0591E7B359200240528 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		976DF05A1E7B359200240528 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		976DF05F1E7B3BDC00240528 /* TypePokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypePokemon.h; sourceTree = "<group>"; };
+		976DF0601E7B3BDC00240528 /* TypePokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypePokemon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				976DF04F1E7B34F600240528 /* main.m */,
+				976DF0561E7B358200240528 /* Pokemon.h */,
+				976DF0571E7B358200240528 /* Pokemon.m */,
+				976DF0591E7B359200240528 /* Player.h */,
+				976DF05A1E7B359200240528 /* Player.m */,
+				976DF05F1E7B3BDC00240528 /* TypePokemon.h */,
+				976DF0601E7B3BDC00240528 /* TypePokemon.m */,
 			);
 			path = ChallengeOO;
 			sourceTree = "<group>";
@@ -121,6 +136,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				976DF0501E7B34F600240528 /* main.m in Sources */,
+				976DF0611E7B3BDC00240528 /* TypePokemon.m in Sources */,
+				976DF05B1E7B359200240528 /* Player.m in Sources */,
+				976DF0581E7B358200240528 /* Pokemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
