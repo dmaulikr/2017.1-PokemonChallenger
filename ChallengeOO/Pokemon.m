@@ -11,34 +11,34 @@
 
 @implementation Pokemon
 
--(PokemonType) type {
+- (PokemonType) type {
     return type;
 }
--(NSNumber *) level {
+- (NSNumber *) level {
     return level;
 }
 
--(NSNumber *) exp {
+- (NSNumber *) exp {
     return exp;
 }
 
--(NSString *) name {
+- (NSString *) name {
     return name;
 }
 
--(void) type : (PokemonType) currentType {
+- (void) type : (PokemonType) currentType {
     type = currentType;
 }
 
--(void) level : (NSNumber*) currentLevel {
+- (void) level : (NSNumber*) currentLevel {
     level = currentLevel;
 }
 
--(void) exp : (NSNumber*)currentExp {
+- (void) exp : (NSNumber*)currentExp {
     exp = currentExp;
 }
 
--(void) name : (NSString*)currentName {
+- (void) name : (NSString*)currentName {
     name = currentName;
 }
 

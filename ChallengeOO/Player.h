@@ -18,14 +18,19 @@
 
 #pragma mark - Getters
 
--(NSMutableArray *) pokemons;
--(NSString *) name;
--(NSString *) city;
+- (NSMutableArray *) pokemons;
+- (NSString *) name;
+- (NSString *) city;
 
 #pragma mark - Setter
 
--(void) setPokemons : (NSMutableArray *) currentPokemons;
--(void) setName : (NSString *) currentName;
--(void) setCity : (NSString *) currentCity;
+- (void) setPokemons : (NSMutableArray* ) currentPokemons;
+- (void) setName;
+- (void) setCity : (NSString* ) currentCity;
+
+
+- (Boolean) catchPokemon;
+
+
 
 @end

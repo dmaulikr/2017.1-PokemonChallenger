@@ -18,17 +18,17 @@
 
 #pragma mark - Getters
 
--(PokemonType) type;
--(NSNumber *) level;
--(NSNumber *) exp ;
--(NSString *) name;
+- (PokemonType) type;
+- (NSNumber *) level;
+- (NSNumber *) exp ;
+- (NSString *) name;
 
 #pragma mark - Setters
 
--(void) type : (PokemonType) currentType;
--(void) level : (NSNumber*) currentLevel;
--(void) exp : (NSNumber*)currentExp;
--(void) name : (NSString*)currentName;
+- (void) type : (PokemonType) currentType;
+- (void) level : (NSNumber*) currentLevel;
+- (void) exp : (NSNumber*)currentExp;
+- (void) name : (NSString*)currentName;
 
 
 @end
