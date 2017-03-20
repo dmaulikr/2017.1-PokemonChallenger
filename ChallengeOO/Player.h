@@ -8,28 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface Player : NSObject
-{
-    NSMutableArray * pokemons;
-    NSString * name;
-    NSString * city;
-    
-}
 
-#pragma mark - Getters
-
-- (NSMutableArray *) pokemons;
-- (NSString *) name;
-- (NSString *) city;
-
-#pragma mark - Setter
-
-- (void) setPokemons : (NSMutableArray* ) currentPokemons;
-- (void) setName;
-- (void) setCity : (NSString* ) currentCity;
+@property(nonatomic) NSMutableArray * pokemons;
+@property(nonatomic) NSString * name;
+@property(nonatomic) NSString * city;
 
 
-- (Boolean) catchPokemon;
+//
+//#pragma mark - Getters
+//
+//- (NSMutableArray *) pokemons;
+//- (NSString *) name;
+//- (NSString *) city;
+//
+//#pragma mark - Setter with
+//
+//- (void) setPokemons : (NSMutableArray* ) currentPokemons;
+//- (void) setName;
+//- (void) setCity : (NSString* ) currentCity;
+//
+//
+//- (Boolean) catchPokemon;
 
 
 

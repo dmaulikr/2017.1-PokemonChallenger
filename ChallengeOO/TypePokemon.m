@@ -8,6 +8,6 @@
 
 #import "TypePokemon.h"
 
-@implementation EnumTypePokemon
+@implementation TypePokemon
 
 @end

@@ -11,35 +11,49 @@
 
 @implementation Pokemon
 
-- (PokemonType) type {
-    return type;
-}
-- (NSNumber *) level {
-    return level;
+@synthesize exp =_exp;
+@synthesize level = _level;
+@synthesize type = _type;
+@synthesize name = _name;
+
+
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%u", _type];
 }
 
-- (NSNumber *) exp {
-    return exp;
-}
 
-- (NSString *) name {
-    return name;
-}
-
-- (void) type : (PokemonType) currentType {
-    type = currentType;
-}
-
-- (void) level : (NSNumber*) currentLevel {
-    level = currentLevel;
-}
-
-- (void) exp : (NSNumber*)currentExp {
-    exp = currentExp;
-}
-
-- (void) name : (NSString*)currentName {
-    name = currentName;
-}
+//
+//- (PokemonType) type {
+//    return type;
+//}
+//- (NSNumber *) level {
+//    return level;
+//}
+//
+//- (NSNumber *) exp {
+//    return exp;
+//}
+//
+//- (NSString *) name {
+//    return name;
+//}
+//
+//- (void) type : (PokemonType) currentType {
+//    type = currentType;
+//}
+//
+//- (void) level : (NSNumber*) currentLevel {
+//    level = currentLevel;
+//}
+//
+//- (void) exp : (NSNumber*)currentExp {
+//    exp = currentExp;
+//}
+//
+//- (void) name : (NSString*)currentName {
+//    name = currentName;
+//}
 
 @end

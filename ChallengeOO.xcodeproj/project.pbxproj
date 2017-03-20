@@ -11,6 +11,9 @@
 		976DF0581E7B358200240528 /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF0571E7B358200240528 /* Pokemon.m */; };
 		976DF05B1E7B359200240528 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF05A1E7B359200240528 /* Player.m */; };
 		976DF0611E7B3BDC00240528 /* TypePokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF0601E7B3BDC00240528 /* TypePokemon.m */; };
+		ADA7FACA1E8065890028C163 /* Gymnasium.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA7FAC91E8065890028C163 /* Gymnasium.m */; };
+		ADA7FACD1E80694F0028C163 /* PokemonWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA7FACC1E80694F0028C163 /* PokemonWorld.m */; };
+		ADA7FAD11E806C7B0028C163 /* ObjectsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA7FAD01E806C7B0028C163 /* ObjectsFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,12 @@
 		976DF05A1E7B359200240528 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		976DF05F1E7B3BDC00240528 /* TypePokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypePokemon.h; sourceTree = "<group>"; };
 		976DF0601E7B3BDC00240528 /* TypePokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypePokemon.m; sourceTree = "<group>"; };
+		ADA7FAC81E8065890028C163 /* Gymnasium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gymnasium.h; sourceTree = "<group>"; };
+		ADA7FAC91E8065890028C163 /* Gymnasium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gymnasium.m; sourceTree = "<group>"; };
+		ADA7FACB1E80694F0028C163 /* PokemonWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonWorld.h; sourceTree = "<group>"; };
+		ADA7FACC1E80694F0028C163 /* PokemonWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonWorld.m; sourceTree = "<group>"; };
+		ADA7FACF1E806C7B0028C163 /* ObjectsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectsFactory.h; sourceTree = "<group>"; };
+		ADA7FAD01E806C7B0028C163 /* ObjectsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectsFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +75,21 @@
 		976DF04E1E7B34F600240528 /* ChallengeOO */ = {
 			isa = PBXGroup;
 			children = (
+				ADA7FACE1E806B940028C163 /* models */,
 				976DF04F1E7B34F600240528 /* main.m */,
+				ADA7FACF1E806C7B0028C163 /* ObjectsFactory.h */,
+				ADA7FAD01E806C7B0028C163 /* ObjectsFactory.m */,
+			);
+			path = ChallengeOO;
+			sourceTree = "<group>";
+		};
+		ADA7FACE1E806B940028C163 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				ADA7FACB1E80694F0028C163 /* PokemonWorld.h */,
+				ADA7FACC1E80694F0028C163 /* PokemonWorld.m */,
+				ADA7FAC81E8065890028C163 /* Gymnasium.h */,
+				ADA7FAC91E8065890028C163 /* Gymnasium.m */,
 				976DF0561E7B358200240528 /* Pokemon.h */,
 				976DF0571E7B358200240528 /* Pokemon.m */,
 				976DF0591E7B359200240528 /* Player.h */,
@@ -74,7 +97,7 @@
 				976DF05F1E7B3BDC00240528 /* TypePokemon.h */,
 				976DF0601E7B3BDC00240528 /* TypePokemon.m */,
 			);
-			path = ChallengeOO;
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA7FAD11E806C7B0028C163 /* ObjectsFactory.m in Sources */,
+				ADA7FACD1E80694F0028C163 /* PokemonWorld.m in Sources */,
 				976DF0501E7B34F600240528 /* main.m in Sources */,
+				ADA7FACA1E8065890028C163 /* Gymnasium.m in Sources */,
 				976DF0611E7B3BDC00240528 /* TypePokemon.m in Sources */,
 				976DF05B1E7B359200240528 /* Player.m in Sources */,
 				976DF0581E7B358200240528 /* Pokemon.m in Sources */,
@@ -267,6 +293,7 @@
 				976DF0551E7B34F600240528 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

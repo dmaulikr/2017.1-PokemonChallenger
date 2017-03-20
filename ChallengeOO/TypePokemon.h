@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EnumTypePokemon : NSObject
+@interface TypePokemon : NSObject
    typedef enum {
        WATER = 1,
        FIRE,
-       WIND,
-       EARTH
+       FLY
    }PokemonType;
 
 @end

@@ -10,17 +10,17 @@
 #import "Player.h"
 #import "Pokemon.h"
 #import "TypePokemon.h"
-
+#import "ObjectsFactory.h"
+#import "TypePokemon.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-   
-        Player *p  = [[Player alloc] init];
         
-        [p setName];
+        NSNumber * level = [NSNumber numberWithInt:10];
+        NSNumber * exp = [NSNumber numberWithInt:25];
+        Pokemon *pokemon = [ObjectsFactory getPokemonName:@"Pikachu" type: FIRE level:level experience:exp];
         
-        NSLog(@"%@", [p name]);
-        
-        
+        NSLog(@"%@", pokemon);
+    
         
     }
     return 0;
