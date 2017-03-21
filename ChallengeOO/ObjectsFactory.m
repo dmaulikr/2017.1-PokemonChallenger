@@ -11,6 +11,8 @@
 #import "Player.h"
 #import "Gymnasium.h"
 
+#define NAME_SIZE 20
+
 @implementation ObjectsFactory
 
 + (Pokemon *) getPokemonName : (NSString*) name type: (PokemonType) type level: (NSNumber *) lvl experience: (NSNumber*) exp {
@@ -97,17 +99,17 @@
 
 
 
-+(NSNumber*) convertIntToNSNumber : (int) i {
++ (NSNumber*) convertIntToNSNumber: (int) i {
     return [NSNumber numberWithInt:i];
 }
 
 
-+(NSMutableArray*) getRandomsPokemons {
++ (NSMutableArray*) getRandomsPokemons {
 
     NSMutableArray * arrayOfPokemons = [self  getPokemons];
     
     int index = arc4random() % 10;
-    
+
 
     NSMutableArray * ret = [[NSMutableArray alloc] init];
     
@@ -117,4 +119,36 @@
 
     return ret;
 }
+
++ (Player *) createPlayerWithValidation {
+    
+    NSString * playerName = [self NSStringScanner: NAME_SIZE ];
+    
+    if(playerName.length < 3) {
+        NSLog(@"This player name is not valid");
+    }
+    
+    Player * newPlayer = [[Player alloc] init];
+
+//    
+//    newPlayer = [self getPlayerWithPokemons: name: playerName city: @"Pallet"]
+//    
+    
+    return newPlayer;
+    
+}
+
+         
++ (NSString *) NSStringScanner: (int) sizeOfExpression {
+    
+    char array[sizeOfExpression];
+    scanf("%s", array);
+    
+    NSString * NSStringExpression = [NSString stringWithCString:array encoding:1];
+    
+    return NSStringExpression;
+}
+
+
 @end
+

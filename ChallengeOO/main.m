@@ -12,6 +12,10 @@
 #import "TypePokemon.h"
 #import "ObjectsFactory.h"
 #import "TypePokemon.h"
+
+void printMenu(void);
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
@@ -21,7 +25,14 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"%@", pokemon);
     
-        
     }
     return 0;
+}
+
+void printMenu(void) {
+    
+    printf("\t\t\t\tPokemon\n\n\n");
+    printf("Let's start it. Please enter your name:   ");
+    
+    
 }
