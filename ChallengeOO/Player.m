@@ -30,63 +30,45 @@
 }
 
 
+- (void) findPokemon {
+    
+    do{
+        Pokemon * pokemon = [[ObjectsFactory getRandomsPokemons: 1] objectAtIndex: 0];
+        NSLog(@"\nA wild pokemon has appeared");
+        NSLog(@"\n%@", pokemon);
+        if([[Scanner NSStringScanner: 2 instruction:@"\nDeseja capturar este pokemon?\n 1 - Sim\n 2 - Não"] isEqualToString:@"1"]) {
+            if([self catchPokemon]){
+                if([_pokemons count] < 5){
+                    NSLog(@"\nCongratz, you caught %@",pokemon.name);
+                    [_pokemons addObject: pokemon];
+                }else {
+                    NSLog(@"\nBag full!");
+                }
+            }else{
+                NSLog(@"\nThe Pokemon run away");
+            }
+        }
+    }while([_pokemons count] < 5);
+}
 
-//
-//
-//- (NSMutableArray* ) pokemons {
-//    return pokemons;
-//}
-//
-//- (NSString* ) name {
-//    return name;
-//}
-//
-//- (NSString* ) city {
-//    return city;
-//}
-//
-//- (void) setPokemons : (NSMutableArray* ) currentPokemons {
-//    pokemons = currentPokemons;
-//}
-//
-//- (void) setName {
-//    name = [self scanPlayerWithValidation];
-//}
-//
-//- (void) setCity : (NSString* ) currentCity {
-//    city = currentCity;
-//}
-//
-//
-//- (NSString* ) scanPlayerWithValidation {
-//
-//    char PlayerName[NAME_SIZE];
-//    scanf("%s", PlayerName);
-//    NSString* newPlayerName = [NSString stringWithCString:PlayerName encoding:1];
-//    
-//    
-//    if(newPlayerName.length < 3) {
-//        NSLog(@"This player name is not valid");
-//    }
-//    
-//    
-//    
-//    return newPlayerName;
-//}
-//
-//- (Boolean) catchPokemon {
-//    
-//    int randomNumber = arc4random() % 100;
-//    
-//    printf("%d", randomNumber);
-//    
-//    if(randomNumber > 30)
-//        return false;
-//    else
-//        return true;
-//}
+- (BOOL) catchPokemon {
+    
+    int randomNumber = arc4random() % 100;
+    int anotherRandomNumber = arc4random() % 100;
+    
+    return (randomNumber > anotherRandomNumber);
+}
 
+//NSSortDescriptor *sortDescriptor;
+//sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"birthDate"
+//                                             ascending:YES];
+//NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+//NSArray *sortedArray = [drinkDetails sortedArrayUsingDescriptors:sortDescriptors];
 
+-(NSArray *) sortPokemons {
+    NSArray * sortedPokemons = [_pokemons sortedArrayUsingSelector:@selector(compare:)];
+    return sortedPokemons;
+}
 
 
 @end

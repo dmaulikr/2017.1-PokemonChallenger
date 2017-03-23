@@ -11,6 +11,7 @@
 		976DF0581E7B358200240528 /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF0571E7B358200240528 /* Pokemon.m */; };
 		976DF05B1E7B359200240528 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF05A1E7B359200240528 /* Player.m */; };
 		976DF0611E7B3BDC00240528 /* TypePokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 976DF0601E7B3BDC00240528 /* TypePokemon.m */; };
+		AD511A781E81CC3B00FB2BB0 /* Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = AD511A771E81CC3B00FB2BB0 /* Scanner.m */; };
 		ADA7FACA1E8065890028C163 /* Gymnasium.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA7FAC91E8065890028C163 /* Gymnasium.m */; };
 		ADA7FACD1E80694F0028C163 /* PokemonWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA7FACC1E80694F0028C163 /* PokemonWorld.m */; };
 		ADA7FAD11E806C7B0028C163 /* ObjectsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA7FAD01E806C7B0028C163 /* ObjectsFactory.m */; };
@@ -37,6 +38,8 @@
 		976DF05A1E7B359200240528 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		976DF05F1E7B3BDC00240528 /* TypePokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypePokemon.h; sourceTree = "<group>"; };
 		976DF0601E7B3BDC00240528 /* TypePokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypePokemon.m; sourceTree = "<group>"; };
+		AD511A761E81CC3B00FB2BB0 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		AD511A771E81CC3B00FB2BB0 /* Scanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scanner.m; sourceTree = "<group>"; };
 		ADA7FAC81E8065890028C163 /* Gymnasium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gymnasium.h; sourceTree = "<group>"; };
 		ADA7FAC91E8065890028C163 /* Gymnasium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gymnasium.m; sourceTree = "<group>"; };
 		ADA7FACB1E80694F0028C163 /* PokemonWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonWorld.h; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 				976DF04F1E7B34F600240528 /* main.m */,
 				ADA7FACF1E806C7B0028C163 /* ObjectsFactory.h */,
 				ADA7FAD01E806C7B0028C163 /* ObjectsFactory.m */,
+				AD511A761E81CC3B00FB2BB0 /* Scanner.h */,
+				AD511A771E81CC3B00FB2BB0 /* Scanner.m */,
 			);
 			path = ChallengeOO;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				ADA7FACA1E8065890028C163 /* Gymnasium.m in Sources */,
 				976DF0611E7B3BDC00240528 /* TypePokemon.m in Sources */,
 				976DF05B1E7B359200240528 /* Player.m in Sources */,
+				AD511A781E81CC3B00FB2BB0 /* Scanner.m in Sources */,
 				976DF0581E7B358200240528 /* Pokemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

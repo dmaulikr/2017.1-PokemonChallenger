@@ -15,7 +15,7 @@
 
 @implementation ObjectsFactory
 
-+ (Pokemon *) getPokemonName : (NSString*) name type: (PokemonType) type level: (NSNumber *) lvl experience: (NSNumber*) exp {
++ (Pokemon *) getPokemonName : (NSString *) name type: (PokemonType) type level: (NSNumber *) lvl experience: (NSNumber *) exp {
     
     Pokemon * ret = [[Pokemon alloc]init];
     
@@ -28,7 +28,7 @@
     
 }
 
-+ (Player *) getPlayerWithPokemons : (NSMutableArray*) pokemons name: (NSString*) name city : (NSString*) city {
++ (Player *) getPlayerWithPokemons : (NSMutableArray *) pokemons name: (NSString *) name city : (NSString *) city {
     
     Player *ret = [[Player alloc]init];
     ret.city = city;
@@ -46,15 +46,15 @@
     [ret addObject: [self getPokemonName:@"Magikarp" type: WATER level: [self convertIntToNSNumber: 1] experience: [self convertIntToNSNumber: 25]]];
     
     [ret addObject: [self getPokemonName:@"Arcanine" type: FIRE level: [self convertIntToNSNumber: 10] experience: [self convertIntToNSNumber: 25]]];
-    [ret addObject: [self getPokemonName:@"Magma" type: FIRE level: [self convertIntToNSNumber: 8] experience: [self convertIntToNSNumber: 0]]];
-    [ret addObject: [self getPokemonName:@"Charmander" type: FIRE level: [self convertIntToNSNumber: 11] experience: [self convertIntToNSNumber: 0]]];
+    [ret addObject: [self getPokemonName:@"Magmar" type: FIRE level: [self convertIntToNSNumber: 8] experience: [self convertIntToNSNumber: 0]]];
+    [ret addObject: [self getPokemonName:@"Charmander" type: FIRE level: [self convertIntToNSNumber: 14] experience: [self convertIntToNSNumber: 0]]];
     
     [ret addObject: [self getPokemonName:@"Pidgey" type: FLY level: [self convertIntToNSNumber: 9] experience: [self convertIntToNSNumber: 50]]];
     [ret addObject: [self getPokemonName:@"Zubat" type: FLY level: [self convertIntToNSNumber: 10] experience: [self convertIntToNSNumber: 99] ]];
     [ret addObject: [self getPokemonName:@"Dragonite" type: FLY level: [self convertIntToNSNumber: 16] experience: [self convertIntToNSNumber: 50] ]];
    
     
-    [ret addObject: [self getPokemonName:@"Suicuni" type: WATER level: [self convertIntToNSNumber: 16] experience: [self convertIntToNSNumber: 33] ]];
+    [ret addObject: [self getPokemonName:@"Rapidash" type: WATER level: [self convertIntToNSNumber: 3] experience: [self convertIntToNSNumber: 33] ]];
     
     return ret;
 }
@@ -63,25 +63,25 @@
     
     NSMutableArray *ret =  [[NSMutableArray alloc]init];
     
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Ash" city: @"Pallet"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Brock" city: @"Viridian"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"James" city: @"Pweter City"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Jessie" city: @"Pweter City"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Misty" city: @"Saffron City"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Tracey" city: @"Lavander"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Max" city: @"Vermillion City"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Braguinha" city: @"Bepid City"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Professor Carvalho" city: @"Sao Jose City"]];
-    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons] name: @"Dawn" city: @"Vermillion City"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Ash" city: @"Pallet"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Brock" city: @"Viridian"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"James" city: @"Pweter City"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Jessie" city: @"Pweter City"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Misty" city: @"Saffron City"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Tracey" city: @"Lavander"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Max" city: @"Vermillion City"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Braguinha" city: @"Bepid City"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Professor Carvalho" city: @"Sao Jose City"]];
+    [ret addObject: [self getPlayerWithPokemons: [self getRandomsPokemons: 5] name: @"Dawn" city: @"Vermillion City"]];
 
 
     return ret;
 }
 
-+ (Gymnasium *) getGymnasiumWithName : (NSString*) name player: (Player*) player {
-    Gymnasium * gym = [[Gymnasium alloc]init];
++ (Gymnasium *) getGymnasiumWithName : (NSString*) name Player: (Player*) Player {
+    Gymnasium * gym = [[Gymnasium alloc] init];
     gym.name = name;
-    gym.leader = player;
+    gym.leader = Player;
     return gym;
 }
 
@@ -89,9 +89,9 @@
     NSMutableArray *ret =  [[NSMutableArray alloc]init];
     
     
-    [ret addObject: [self getGymnasiumWithName:@"Saffron Gym" player: [[self getPlayers] objectAtIndex: 0]]];
-    [ret addObject: [self getGymnasiumWithName:@"Vermillion Gym" player: [[self getPlayers] objectAtIndex: 4]]];
-    [ret addObject: [self getGymnasiumWithName:@"Bepid Gym" player: [[self getPlayers] objectAtIndex: 8]]];
+    [ret addObject: [self getGymnasiumWithName:@"Saffron Gym" Player: [[self getPlayers] objectAtIndex: 0]]];
+    [ret addObject: [self getGymnasiumWithName:@"Vermillion Gym" Player: [[self getPlayers] objectAtIndex: 4]]];
+    [ret addObject: [self getGymnasiumWithName:@"Bepid Gym" Player: [[self getPlayers] objectAtIndex: 8]]];
     
     return ret;
      
@@ -99,12 +99,13 @@
 
 
 
-+ (NSNumber*) convertIntToNSNumber: (int) i {
-    return [NSNumber numberWithInt:i];
++ (NSNumber *) convertIntToNSNumber: (int) i {
+    return [NSNumber numberWithInt: i];
 }
 
 
-+ (NSMutableArray*) getRandomsPokemons {
+
++ (NSMutableArray *) getRandomsPokemons: (int) numberOfPokemons {
 
     NSMutableArray * arrayOfPokemons = [self  getPokemons];
     
@@ -113,7 +114,7 @@
 
     NSMutableArray * ret = [[NSMutableArray alloc] init];
     
-    for(int i = 0; i < 5; ++i)
+    for(int i = 0; i < numberOfPokemons; ++i)
         [ret addObject: [arrayOfPokemons objectAtIndex: index]];
     
 
@@ -122,33 +123,21 @@
 
 + (Player *) createPlayerWithValidation {
     
-    NSString * playerName = [self NSStringScanner: NAME_SIZE ];
+    NSString * PlayerName = [Scanner NSStringScanner: NAME_SIZE instruction: @"\n\n\n\t\t\tHey, Im professor Oak. Let start this game.\n Please enter your name: "];
     
-    if(playerName.length < 3) {
-        NSLog(@"This player name is not valid");
+    if(PlayerName.length < 3) {
+        NSLog(@"This Player name is not valid");
     }
     
     Player * newPlayer = [[Player alloc] init];
 
-//    
-//    newPlayer = [self getPlayerWithPokemons: name: playerName city: @"Pallet"]
-//    
+    
+    newPlayer.name = PlayerName;
+    newPlayer.city = @"Pallet";
+    
     
     return newPlayer;
     
 }
-
-         
-+ (NSString *) NSStringScanner: (int) sizeOfExpression {
-    
-    char array[sizeOfExpression];
-    scanf("%s", array);
-    
-    NSString * NSStringExpression = [NSString stringWithCString:array encoding:1];
-    
-    return NSStringExpression;
-}
-
-
 @end
 

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
+#import "Pokemon.h"
+#import "ObjectsFactory.h"
 
 @interface Player : NSObject
 
@@ -17,22 +17,8 @@
 @property(nonatomic) NSString * city;
 
 
-//
-//#pragma mark - Getters
-//
-//- (NSMutableArray *) pokemons;
-//- (NSString *) name;
-//- (NSString *) city;
-//
-//#pragma mark - Setter with
-//
-//- (void) setPokemons : (NSMutableArray* ) currentPokemons;
-//- (void) setName;
-//- (void) setCity : (NSString* ) currentCity;
-//
-//
-//- (Boolean) catchPokemon;
-
+-(NSArray *) sortPokemons;
+- (void) findPokemon;
 
 
 @end

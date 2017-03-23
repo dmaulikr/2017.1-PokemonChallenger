@@ -1,5 +1,4 @@
-//
-//  Pokemon.h
+//  File: Pokemon.h
 //  ChallengeOO
 //
 //  Created by Isaias Fernandes on 16/03/17.
@@ -18,7 +17,6 @@
 
 
 
-
 //
 //#pragma mark - Getters
 //
@@ -27,11 +25,11 @@
 //- (NSNumber *) exp ;
 //- (NSString *) name;
 //
-//#pragma mark - Setters
-//
+#pragma mark - Setters
+
 //- (void) type : (PokemonType) currentType;
-//- (void) level : (NSNumber*) currentLevel;
-//- (void) exp : (NSNumber*)currentExp;
+-(void) setLevel : (NSNumber*) currentLevel;
+-(void) setExp : (NSNumber*)currentExp;
 //- (void) name : (NSString*)currentName;
 
 

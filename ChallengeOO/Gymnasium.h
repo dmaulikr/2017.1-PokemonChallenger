@@ -1,4 +1,3 @@
-//
 //  Gymnasium.h
 //  ChallengeOO
 //
@@ -7,14 +6,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Player.h"
+#import "ObjectsFactory.h"
+#import "Gymnasium.h"
+
+
+@class Player;
 
 @interface Gymnasium : NSObject
 
 @property(nonatomic) NSString * name;
 @property(nonatomic) Player * leader;
 
-
+- (void) fightLeader: (Player *) challenger;
 
 
 @end

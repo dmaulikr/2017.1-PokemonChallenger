@@ -20,40 +20,34 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%u", _type];
+    return [NSString stringWithFormat:@"Nome: %@/n Nivel: %@/n", _name, _level];
 }
 
+- (NSComparisonResult)compare:(Pokemon *)otherObject {
+    return [otherObject.level compare: self.level];
+}
 
-//
-//- (PokemonType) type {
-//    return type;
-//}
-//- (NSNumber *) level {
-//    return level;
-//}
-//
-//- (NSNumber *) exp {
-//    return exp;
-//}
-//
-//- (NSString *) name {
-//    return name;
-//}
-//
-//- (void) type : (PokemonType) currentType {
-//    type = currentType;
-//}
-//
-//- (void) level : (NSNumber*) currentLevel {
-//    level = currentLevel;
-//}
-//
-//- (void) exp : (NSNumber*)currentExp {
-//    exp = currentExp;
-//}
-//
-//- (void) name : (NSString*)currentName {
-//    name = currentName;
-//}
+-(void) setLevel : (NSNumber *) currentLevel {
+   int aux = _level.intValue;
+    
+   aux += currentLevel.intValue;
+    
+    _level = [NSNumber numberWithInt: aux];
+}
+-(void) setExp : (NSNumber*)currentExp {
+    int aux = _exp.intValue;
+    aux += currentExp.intValue;
+    
+    _exp = [NSNumber numberWithInt: aux];
+    
+    
+    if(_exp.intValue >= 100) {
+        [self setLevel:[NSNumber numberWithInt: 1]];
+    
+        _exp = [NSNumber numberWithInt: _exp.intValue - 100];
+    }
+    
+}
+
 
 @end
