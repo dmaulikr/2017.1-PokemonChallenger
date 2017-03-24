@@ -1,13 +1,5 @@
-//
-//  ObjectsFactory.h
-//  ChallengeOO
-//
-//  Created by Miguel Pimentel on 20/03/17.
-//  Copyright © 2017 Isaias Fernandes. All rights reserved.
-//
-
-//#import "Player.h"
-//#import "Gymnasium.h"
+//  File: ObjectsFactory.h
+//  Description:  Instanciate required objects to run the game
 
 
 #import <Foundation/Foundation.h>

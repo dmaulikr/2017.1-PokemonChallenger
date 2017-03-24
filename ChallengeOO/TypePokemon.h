@@ -1,10 +1,5 @@
-//
-//  EnumTypePokemon.h
-//  ChallengeOO
-//
-//  Created by Isaias Fernandes on 16/03/17.
-//  Copyright © 2017 Isaias Fernandes. All rights reserved.
-//
+//  File: EnumTypePokemon.h
+//  Description: Enumerate for pokemons
 
 #import <Foundation/Foundation.h>
 

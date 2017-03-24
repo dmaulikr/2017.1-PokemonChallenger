@@ -1,15 +1,12 @@
-//
-//  Pokemon.m
-//  ChallengeOO
-//
-//  Created by Isaias Fernandes on 16/03/17.
-//  Copyright © 2017 Isaias Fernandes. All rights reserved.
-//
+//  File: Pokemon.m
+
 
 #import "Pokemon.h"
 #import "TypePokemon.h"
 
 @implementation Pokemon
+
+#pragma mark - Synthesizes
 
 @synthesize exp =_exp;
 @synthesize level = _level;
@@ -20,7 +17,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"Nome: %@/n Nivel: %@/n", _name, _level];
+    return [NSString stringWithFormat:@"\nNome: %@\n Nivel: %@\n", _name, _level];
 }
 
 - (NSComparisonResult)compare:(Pokemon *)otherObject {

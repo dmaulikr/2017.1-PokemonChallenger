@@ -1,10 +1,4 @@
-//
-//  Player.m
-//  ChallengeOO
-//
-//  Created by Isaias Fernandes on 16/03/17.
-//  Copyright © 2017 Isaias Fernandes. All rights reserved.
-//
+//  File: Player.m
 
 #import "Player.h"
 
@@ -34,10 +28,12 @@
     
     do{
         Pokemon * pokemon = [[ObjectsFactory getRandomsPokemons: 1] objectAtIndex: 0];
+        
         NSLog(@"\nA wild pokemon has appeared");
         NSLog(@"\n%@", pokemon);
-        if([[Scanner NSStringScanner: 2 instruction:@"\nDeseja capturar este pokemon?\n 1 - Sim\n 2 - Não"] isEqualToString:@"1"]) {
-            if([self catchPokemon]){
+        
+        if([[Scanner NSStringScanner: 2 instruction:@"\nDeseja capturar este pokemon?\n 1 - Sim\n 2 - Não"] isEqualToString:@"1"]){
+            if([self catchPokemon]) {
                 if([_pokemons count] < 5){
                     NSLog(@"\nCongratz, you caught %@",pokemon.name);
                     [_pokemons addObject: pokemon];
@@ -59,13 +55,9 @@
     return (randomNumber > anotherRandomNumber);
 }
 
-//NSSortDescriptor *sortDescriptor;
-//sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"birthDate"
-//                                             ascending:YES];
-//NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-//NSArray *sortedArray = [drinkDetails sortedArrayUsingDescriptors:sortDescriptors];
 
 -(NSArray *) sortPokemons {
+    
     NSArray * sortedPokemons = [_pokemons sortedArrayUsingSelector:@selector(compare:)];
     return sortedPokemons;
 }

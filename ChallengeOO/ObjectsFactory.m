@@ -1,10 +1,5 @@
-//
-//  ObjectsFactory.m
-//  ChallengeOO
-//
-//  Created by Miguel Pimentel on 20/03/17.
-//  Copyright © 2017 Isaias Fernandes. All rights reserved.
-//
+//  File: ObjectsFactory.m
+
 
 #import "ObjectsFactory.h"
 #import "Pokemon.h"
@@ -41,20 +36,20 @@
    
     NSMutableArray *ret = [[NSMutableArray alloc]init];
     
-    [ret addObject: [self getPokemonName:@"Squirtle" type: WATER level: [self convertIntToNSNumber: 7] experience: [self convertIntToNSNumber: 50]]];
-    [ret addObject: [self getPokemonName:@"Poliwag" type: WATER level: [self convertIntToNSNumber: 4] experience: [self convertIntToNSNumber: 10]]];
-    [ret addObject: [self getPokemonName:@"Magikarp" type: WATER level: [self convertIntToNSNumber: 1] experience: [self convertIntToNSNumber: 25]]];
+    [ret addObject: [self getPokemonName:@"Squirtle" type: WATER level: [self convertIntToNSNumber: 7] experience: [self convertIntToNSNumber: 70]]];
+    [ret addObject: [self getPokemonName:@"Poliwag" type: WATER level: [self convertIntToNSNumber: 4] experience: [self convertIntToNSNumber: 90]]];
+    [ret addObject: [self getPokemonName:@"Magikarp" type: WATER level: [self convertIntToNSNumber: 1] experience: [self convertIntToNSNumber: 90]]];
     
-    [ret addObject: [self getPokemonName:@"Arcanine" type: FIRE level: [self convertIntToNSNumber: 10] experience: [self convertIntToNSNumber: 25]]];
-    [ret addObject: [self getPokemonName:@"Magmar" type: FIRE level: [self convertIntToNSNumber: 8] experience: [self convertIntToNSNumber: 0]]];
-    [ret addObject: [self getPokemonName:@"Charmander" type: FIRE level: [self convertIntToNSNumber: 14] experience: [self convertIntToNSNumber: 0]]];
+    [ret addObject: [self getPokemonName:@"Arcanine" type: FIRE level: [self convertIntToNSNumber: 10] experience: [self convertIntToNSNumber: 90]]];
+    [ret addObject: [self getPokemonName:@"Magmar" type: FIRE level: [self convertIntToNSNumber: 8] experience: [self convertIntToNSNumber: 90]]];
+    [ret addObject: [self getPokemonName:@"Charmander" type: FIRE level: [self convertIntToNSNumber: 14] experience: [self convertIntToNSNumber: 90]]];
     
-    [ret addObject: [self getPokemonName:@"Pidgey" type: FLY level: [self convertIntToNSNumber: 9] experience: [self convertIntToNSNumber: 50]]];
+    [ret addObject: [self getPokemonName:@"Pidgey" type: FLY level: [self convertIntToNSNumber: 9] experience: [self convertIntToNSNumber: 90]]];
     [ret addObject: [self getPokemonName:@"Zubat" type: FLY level: [self convertIntToNSNumber: 10] experience: [self convertIntToNSNumber: 99] ]];
-    [ret addObject: [self getPokemonName:@"Dragonite" type: FLY level: [self convertIntToNSNumber: 16] experience: [self convertIntToNSNumber: 50] ]];
+    [ret addObject: [self getPokemonName:@"Dragonite" type: FLY level: [self convertIntToNSNumber: 16] experience: [self convertIntToNSNumber: 90] ]];
    
     
-    [ret addObject: [self getPokemonName:@"Rapidash" type: WATER level: [self convertIntToNSNumber: 3] experience: [self convertIntToNSNumber: 33] ]];
+    [ret addObject: [self getPokemonName:@"Rapidash" type: WATER level: [self convertIntToNSNumber: 3] experience: [self convertIntToNSNumber: 90] ]];
     
     return ret;
 }

@@ -1,9 +1,5 @@
-//  Gymnasium.h
-//  ChallengeOO
-//
-//  Created by Miguel Pimentel on 20/03/17.
-//  Copyright © 2017 Isaias Fernandes. All rights reserved.
-//
+//  File: Gymnasium.h
+//  Description: Represent a gymnasium and your actions
 
 #import <Foundation/Foundation.h>
 #import "ObjectsFactory.h"
@@ -14,7 +10,10 @@
 
 @interface Gymnasium : NSObject
 
+/*! @brief This property knows name. */
 @property(nonatomic) NSString * name;
+
+/*! @brief This property knows leader. */
 @property(nonatomic) Player * leader;
 
 - (void) fightLeader: (Player *) challenger;

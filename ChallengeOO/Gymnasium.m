@@ -1,9 +1,4 @@
-//  FIle: Gymnasium.m
-//  ChallengeOO
-//
-//  Created by Miguel Pimentel on 20/03/17.
-//  Copyright © 2017 Isaias Fernandes. All rights reserved.
-
+//  File: Gymnasium.m
 
 #import "Gymnasium.h"
 #import "Player.h"
@@ -18,12 +13,22 @@
     self = [super init];
     if (self) {
         _leader = [[Player alloc]init];
+
     }
     return self;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"\nGym Name: %@\nGym Leader: %@\n", _name, _leader];
+}
 
 
+/*!
+     @brief It creater and define a fight between a leader and challenger player
+     @discussion This methos not require any paramms
+     @param challenger  present a challenger player that will fight with a leader
+ */
 
 - (void) fightLeader: (Player *) challenger {
     
@@ -34,12 +39,44 @@
     int challengerPoints = 0;
 
     for (int i = 0; i < 3; i++) {
-        if([self fightPokemonWithLeader: [pokemonsLeader objectAtIndex: i] challenger:[pokemonsChallenger objectAtIndex: i]]) {
+        
+        Pokemon * pokemonLeader = [pokemonsLeader objectAtIndex: i];
+        Pokemon * pokemonChallenger = [pokemonsChallenger objectAtIndex: i];
+        
+        int cuurentLevelLeader = pokemonLeader.level.intValue;
+        int cuurentLevelChallenger = pokemonChallenger.level.intValue;
+        
+        
+        NSLog(@"\n------------------------- BATTLE 0%d -----------------------", i+1);
+        
+        NSLog(@"\n%@ choose %@ and Level %@\n", challenger.name, pokemonChallenger.name, pokemonChallenger.level);
+        NSLog(@"\n%@ choose %@ and Level %@\n", _leader.name, pokemonLeader.name, pokemonLeader.level);
+    
+        if([self fightPokemonWithLeader: pokemonLeader challenger:pokemonChallenger]) {
             leaderPoints++;
+            [pokemonLeader setExp:[NSNumber numberWithInt:35]];
+            [pokemonChallenger setExp:[NSNumber numberWithInt:10]];
+            NSLog(@"\n%@ with %@ won!\n", _leader.name, pokemonLeader.name);
         }
         else {
             challengerPoints++;
+            
+            NSLog(@"\n%@ with %@ won\n", challenger.name, pokemonChallenger.name);
+            [pokemonLeader setExp:[NSNumber numberWithInt:10] ];
+            [pokemonChallenger setExp:[NSNumber numberWithInt:35]];
+
         }
+        
+        
+        [self checkIfChangeLevel:pokemonLeader level: cuurentLevelLeader];
+        [self checkIfChangeLevel:pokemonChallenger level: cuurentLevelChallenger];
+        
+        NSLog(@"\nPreparing to Battle...");
+        
+        if(i != 2)
+            [NSThread sleepForTimeInterval:5.0f];
+        
+        
     }
 
     if(challengerPoints > leaderPoints)
@@ -50,13 +87,9 @@
 }
 
 
-//SE RETURN TRUE = LIDER GANHAR
+//Return true if the leader won
 -(BOOL) fightPokemonWithLeader: (Pokemon *) pokemonLeader challenger: (Pokemon *) pokemonChallenger {
-    
-//    
-//   int challengerPoints =  0;
-//   int leaderPoints = 0;
-//    
+ 
    if((pokemonLeader.level.intValue - pokemonChallenger.level.intValue) >= 3) {
         return YES;
        
@@ -64,7 +97,7 @@
         return NO;
     }
 
-    BOOL fightForEqualsType = [self fightPokemonWithLeader: pokemonLeader challenger: pokemonChallenger];
+    BOOL fightForEqualsType = [self fightPokemonTypes: pokemonLeader challenger: pokemonChallenger];
     
     return fightForEqualsType;
    
@@ -72,7 +105,13 @@
     
 }
 
-
+- (void) checkIfChangeLevel: (Pokemon *) pokemon level: (int) lvl  {
+    if(pokemon.level.intValue != lvl)
+    {
+        NSLog(@"\n******The pokemon %@ grow to level %@******\n", pokemon.name, pokemon.level);
+        
+    }
+}
 
 - (BOOL) fightPokemonTypes: (Pokemon *) pokemonLeader challenger: (Pokemon *) pokemonChallenger{
   
